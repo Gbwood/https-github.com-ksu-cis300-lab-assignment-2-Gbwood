@@ -30,20 +30,18 @@
         {
             this.uxMenu = new System.Windows.Forms.MenuStrip();
             this.uxFileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.uxInputText = new System.Windows.Forms.TextBox();
             this.uxOpenDialog = new System.Windows.Forms.OpenFileDialog();
             this.uxSaveDialog = new System.Windows.Forms.SaveFileDialog();
+            this.uxOpen1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxSaveAs1 = new System.Windows.Forms.ToolStripMenuItem();
             this.uxMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // uxMenu
             // 
             this.uxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxFileMenu,
-            this.uxOpen,
-            this.uxSaveAs});
+            this.uxFileMenu});
             this.uxMenu.Location = new System.Drawing.Point(0, 0);
             this.uxMenu.Name = "uxMenu";
             this.uxMenu.Size = new System.Drawing.Size(385, 24);
@@ -52,23 +50,12 @@
             // 
             // uxFileMenu
             // 
+            this.uxFileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxOpen1,
+            this.uxSaveAs1});
             this.uxFileMenu.Name = "uxFileMenu";
             this.uxFileMenu.Size = new System.Drawing.Size(37, 20);
             this.uxFileMenu.Text = "File";
-            // 
-            // uxOpen
-            // 
-            this.uxOpen.Name = "uxOpen";
-            this.uxOpen.Size = new System.Drawing.Size(48, 20);
-            this.uxOpen.Text = "Open";
-            this.uxOpen.Click += new System.EventHandler(this.uxOpen_Click);
-            // 
-            // uxSaveAs
-            // 
-            this.uxSaveAs.Name = "uxSaveAs";
-            this.uxSaveAs.Size = new System.Drawing.Size(62, 20);
-            this.uxSaveAs.Text = " Save As";
-            this.uxSaveAs.Click += new System.EventHandler(this.uxSaveAs_Click);
             // 
             // uxInputText
             // 
@@ -77,6 +64,20 @@
             this.uxInputText.Name = "uxInputText";
             this.uxInputText.Size = new System.Drawing.Size(361, 186);
             this.uxInputText.TabIndex = 1;
+            // 
+            // uxOpen1
+            // 
+            this.uxOpen1.Name = "uxOpen1";
+            this.uxOpen1.Size = new System.Drawing.Size(152, 22);
+            this.uxOpen1.Text = "Open";
+            this.uxOpen1.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // uxSaveAs1
+            // 
+            this.uxSaveAs1.Name = "uxSaveAs1";
+            this.uxSaveAs1.Size = new System.Drawing.Size(152, 22);
+            this.uxSaveAs1.Text = "Save As";
+            this.uxSaveAs1.Click += new System.EventHandler(this.uxSaveAs1_Click);
             // 
             // UserInterface
             // 
@@ -99,11 +100,11 @@
 
         private System.Windows.Forms.MenuStrip uxMenu;
         private System.Windows.Forms.ToolStripMenuItem uxFileMenu;
-        private System.Windows.Forms.ToolStripMenuItem uxOpen;
-        private System.Windows.Forms.ToolStripMenuItem uxSaveAs;
         private System.Windows.Forms.TextBox uxInputText;
         private System.Windows.Forms.OpenFileDialog uxOpenDialog;
         private System.Windows.Forms.SaveFileDialog uxSaveDialog;
+        private System.Windows.Forms.ToolStripMenuItem uxOpen1;
+        private System.Windows.Forms.ToolStripMenuItem uxSaveAs1;
     }
 }
 
